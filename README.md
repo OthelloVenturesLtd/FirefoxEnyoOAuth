@@ -9,8 +9,8 @@ NOTE: You will need to supply your own UI Chrome (ie. buttons, etc.) these can b
 <code>this.$.oAuthIFrame.eventNode</code> object.
 
 USAGE:
-	<code>
-	var oauthConfig={
+
+	var oauthConfig = {
 		authorizeUrl: "url", // Your provider's Authorize URL
 		accessTokenUrl: "url", // Your provider's Access Token URL
 		accessTokenMethod: "POST", // Optional - "GET" by default if not specified
@@ -19,9 +19,9 @@ USAGE:
 		redirect_uri: "http://localhost", // Optional - The redirect URL registered with your provider. "oob" by default if not specified
 		response_type:"code", // One of code or token. Right now, only code is supported.
 		scope: ["scope"], // An array of scope names that you are requesting permission to access.
-		additionalParameters: "params" // Optional - Any additional parameters required by your provider. IE. AOL Reader requires "&supportedIdType=facebook,google,twitter" to enable all auth types.
+		additionalParameters: "params" // Optional - Any additional parameters required by your provider. IE. AOL Reader  requires "&supportedIdType=facebook,google,twitter" to enable all auth types.
 	}
-	</code>
+
 	this.$.oAuthIFrame.beginOAuth(oauthConfig)
 	
 Don't forget to catch the events.
