@@ -6,9 +6,10 @@ In order to use this kind, your app will need to be a privileged app with permis
 For More Info, See: https://developer.mozilla.org/en-US/docs/Web/API/Using_the_Browser_API
 
 NOTE: You will need to supply your own UI Chrome (ie. buttons, etc.) these can be hooked into this kind by using the
-this.$.oAuthIFrame.eventNode object.
+<code>this.$.oAuthIFrame.eventNode</code> object.
 
 USAGE:
+	<code>
 	var oauthConfig={
 		authorizeUrl: "url", // Your provider's Authorize URL
 		accessTokenUrl: "url", // Your provider's Access Token URL
@@ -20,7 +21,7 @@ USAGE:
 		scope: ["scope"], // An array of scope names that you are requesting permission to access.
 		additionalParameters: "params" // Optional - Any additional parameters required by your provider. IE. AOL Reader requires "&supportedIdType=facebook,google,twitter" to enable all auth types.
 	}
-	
+	</code>
 	this.$.oAuthIFrame.beginOAuth(oauthConfig)
 	
 Don't forget to catch the events.
